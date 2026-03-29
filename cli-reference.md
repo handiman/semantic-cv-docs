@@ -1,6 +1,6 @@
-# Semantic‑CV CLI Reference
+# SemanticCV CLI Reference
 
-The Semantic‑CV CLI is the primary tool for creating, editing, validating, and rendering your CV as JSON‑LD. This page documents every command, its purpose, and how it fits into the structured‑data workflow.
+The SemanticCV CLI is the primary tool for creating, editing, validating, and rendering your CV as JSON‑LD. This page documents every command, its purpose, and how it fits into the structured‑data workflow.
 All commands operate on the cv.json file in the current directory unless otherwise specified.
 
 ## Installation

@@ -1,6 +1,8 @@
-## Conventions by CV Area
+# Conventions by CV Area
 
-### Identity
+Recommended fields and how to use them.
+
+## Identity
 
 | Field          | Purpose                                          |
 | -------------- | ------------------------------------------------ |
@@ -9,9 +11,9 @@
 | `description`  | Short summary / professional pitch (required)    |
 | `image`        | Profile photo (URL)                              |
 | `url`          | Personal website or portfolio                    |
-| `workLocation` |                                                  |
+| `workLocation` | Where you're based                               |
 
-### Contact & Online Presence
+## Contact & Online Presence
 
 | Field       | Purpose                                                                                   |
 | ----------- | ----------------------------------------------------------------------------------------- |
@@ -29,7 +31,7 @@ Example:
 ]
 ```
 
-### Work Experience
+## Work Experience
 
 Use `worksFor` to represent both current and past employment, consulting, and long‑term engagements.
 
@@ -55,13 +57,13 @@ Example:
     "description": "Led development of the X platform.",
     "worksFor": {
       "@type": "Organization",
-      "name": "Acme Inc."
+      "name": "Acm  e Inc."
     }
   }
 ]
 ```
 
-### Education
+## Education
 
 Use `alumniOf` for degrees, programs, courses, and training.
 
@@ -80,7 +82,7 @@ Use `alumniOf` for degrees, programs, courses, and training.
 ]
 ```
 
-### Projects
+## Projects
 
 Use `worksFor` with inner `"@type": "Project"` for open source projects, volunteer assignments etc.
 
@@ -89,8 +91,7 @@ Use `worksFor` with inner `"@type": "Project"` for open source projects, volunte
   {
     "@type": "Role",
     "name": "Lead Developer",
-    "startDate": "2015-09-14",
-    "endDate": "2017-07-05",
+    "startDate": "2026-03-01",
     "worksFor": {
       "@type": "Project",
       "name": "Semantic CV"
@@ -99,9 +100,9 @@ Use `worksFor` with inner `"@type": "Project"` for open source projects, volunte
 ]
 ```
 
-### Skills & Competence
+## Skills & Competence
 
-#### Knowledge Areas (broad categories)
+### Knowledge Areas (broad categories)
 
 Use `knowsAbout`:
 
@@ -112,20 +113,20 @@ Use `knowsAbout`:
 ]
 ```
 
-#### Specific skills (tools, languages, frameworks)
+### Specific skills (tools, languages, frameworks)
 
 Use `skills`:
 
 ```json
 "skills": [
-  "C#",
+  ".NET",
+  "Nodejs",
   "Docker",
-  "Azure",
-  "React"
+  "Azure"
 ]
 ```
 
-### Languages
+## Languages
 
 Use `knowsLanguage`:
 
@@ -136,7 +137,7 @@ Use `knowsLanguage`:
 ]
 ```
 
-### Certifications
+## Certifications
 
 Use `hasCertification` or `hasCredential`:
 
@@ -161,7 +162,7 @@ Use `hasCertification` or `hasCredential`:
 ]
 ```
 
-### Achievements & Milestones
+## Achievements & Milestones
 
 Use `lifeEvent` for:
 
@@ -180,7 +181,7 @@ Use `lifeEvent` for:
 ]
 ```
 
-### 🎨 Theme
+## Theme
 
 semantic-cv adds one custom field: `@theme`:
 

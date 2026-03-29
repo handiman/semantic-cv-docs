@@ -1,12 +1,12 @@
 # Publishing Guide
 
-Semantic‑CV can publish your CV directly to the web using the Semantic‑CV GitHub App. This guide explains how the publishing flow works, how to set it up, and what happens behind the scenes.
+SemanticCV can publish your CV directly to the web using the SemanticCV GitHub App. This guide explains how the publishing flow works, how to set it up, and what happens behind the scenes.
 
 ## Overview
-Publishing with Semantic‑CV is designed to be effortless:
+Publishing with SemanticCV is designed to be effortless:
 - You write your CV as JSON‑LD (cv.json)
 - You push it to a GitHub repository
-- The Semantic‑CV GitHub App normalizes and stores your JSON‑LD
+- The SemanticCV GitHub App normalizes and stores your JSON‑LD
 - Your CV becomes available at: 
 ```
 https://semantic.cv/<your-github-username>
@@ -15,7 +15,7 @@ https://semantic.cv/<your-github-username>
 Whenever you push updates, your published CV updates automatically.
 
 ## 1. Install the GitHub App
-Install the Semantic‑CV GitHub App:
+Install the SemanticCV GitHub App:
 → [][install]
 
 During installation, you choose which repositories the app can access.   
@@ -43,7 +43,7 @@ git push
 ## 3. Publishing and Updates
 After you push:
 - The GitHub App receives a webhook
-- Semantic‑CV fetches your `cv.json`
+- SemanticCV fetches your `cv.json`
 - It validates and normalizes the JSON‑LD
 - The normalized JSON‑LD is stored
 - Your public CV page is updated

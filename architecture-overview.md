@@ -1,10 +1,10 @@
 
 # Architecture Overview
-Semantic‑CV is built around a simple idea: your CV is structured data. Everything else — validation, rendering, publishing — flows from that principle.
+SemanticCV is built around a simple idea: your CV is structured data. Everything else — validation, rendering, publishing — flows from that principle.
 This page explains how the system works end‑to‑end.
 
 ## High‑Level Architecture
-Semantic‑CV consists of three main components:
+SemanticCV consists of three main components:
 ### 1. The CLI
 - Helps you create, edit, validate, and normalize your JSON‑LD
 - Can render HTML locally using the same themes as the site
@@ -59,8 +59,8 @@ Your CV becomes version‑controlled, reviewable, and diff‑friendly.
 - deterministic, reproducible CVs
 - a clean separation between data and presentation
 
-## Why Semantic‑CV uses JSON‑LD and schema.org
-Semantic‑CV is built on JSON‑LD and the schema.org/Person vocabulary because they’re **global, industry‑backed standards**. Schema.org was created by Google, Microsoft, Yahoo, and Yandex to provide a shared, structured way of describing people, organizations, and content on the web.
+## Why SemanticCV uses JSON‑LD and schema.org
+SemanticCV is built on JSON‑LD and the schema.org/Person vocabulary because they’re **global, industry‑backed standards**. Schema.org was created by Google, Microsoft, Yahoo, and Yandex to provide a shared, structured way of describing people, organizations, and content on the web.
 
 Using these standards means your CV:
 - is based on a format recognized across the entire web
