@@ -1,76 +1,111 @@
-
 # Architecture Overview
-SemanticCV is built around a simple idea: your CV is structured data. Everything else — validation, rendering, publishing — flows from that principle.
-This page explains how the system works end‑to‑end.
+Semantic‑CV is built on a simple idea: **your CV is structured data**. Everything else — validation, normalization, rendering — flows from that foundation. This page describes how the system works end‑to‑end in its current form.
 
-## High‑Level Architecture
-SemanticCV consists of three main components:
+## High‑level structure
+Semantic‑CV consists of three cooperating layers that share the same rendering pipeline:
+
 ### 1. The CLI
-- Helps you create, edit, validate, and normalize your JSON‑LD
-- Can render HTML locally using the same themes as the site
+- Validates and normalizes your JSON‑LD
+- Renders HTML locally using the same themes as the hosted service
+- Uses a WASM‑powered HTMLRewriter to assemble the final document
+
 ### 2. The Publishing Service
 - Receives updates via GitHub webhooks
 - Normalizes and stores your JSON‑LD
-- Serves a minimal HTML shell containing your JSON‑LD
-### 3. Client‑Side Themes
-- JavaScript/Web Component bundles
-- Read your JSON‑LD from `<script type="application/ld+json">`
-- Render your CV entirely in the browser
+- Renders HTML server‑side using the same theme pipeline
+- Serves the final HTML directly (no client‑side rendering required)
 
-This architecture keeps the system fast, flexible, and theme‑agnostic.
+### 3. Theme Classes
+- Each theme is a class inheriting from a shared base Theme class
+- Implements `renderHTML`, `renderCSS`, and `renderJS`
+- Produces deterministic output based solely on your JSON‑LD
+- May optionally include a Web Component for client‑side enhancement
 
-## Data Flow
-### 1. You write JSON‑LD
-Your cv.json is the single source of truth.
+This architecture keeps rendering consistent across environments while remaining theme‑agnostic and future‑proof.
+
+## Data flow
+### 1. You create your JSON‑LD
+You can manage your CV in two ways:
+
+- **Using the CLI**, which gives you commands like `init`, `add`, `set`, `analyze`, and `normalize` to keep everything tidy and structurally correct.
+
+- **Or by hand**, editing raw JSON‑LD in your favourite text editor. This is fully supported… but unless you genuinely enjoy hand‑crafting nested objects at 2 AM, the CLI is usually the more pleasant option.
+
+Your `cv.json` is the single source of truth, regardless of how you maintain it.
+
 ### 2. The CLI validates and normalizes
-Commands like analyze and normalize ensure your data is clean and schema‑aligned.
+Commands like `analyze` and `normalize` ensure your data is structurally correct, schema‑aligned, and ready for rendering.
+
 ### 3. Publishing stores normalized JSON‑LD
 When you push to GitHub:
 - the publishing service fetches your JSON‑LD
 - normalizes it
-- stores it
-- embeds it into a minimal HTML page
-### 4. Themes render client‑side
-Each theme is a JavaScript bundle that:
-- loads the JSON‑LD from the page
-- interprets it according to the schema
-- renders the CV using Web Components
+- renders your CV using the same theme pipeline as the CLI
+- serves the final HTML
 
-This means:
-- no server‑side rendering
-- no stored HTML
-- instant theme switching
-- future‑proof rendering
+### 4. Themes render server‑side
+Each theme class:
+- receives the normalized Person object
+- generates HTML, CSS, and JS as strings
+- relies on the HTMLRewriter pipeline to assemble the final document
 
-## Why This Architecture?
-### 1. JSON‑LD as the source of truth
+Client‑side Web Components are optional and used only for enhancements.
+
+## Rendering pipeline
+Semantic‑CV uses a **runtime‑neutral HTML rewriting pipeline**. Both the CLI and the publishing service follow the same steps:
+
+1. Load and normalize the JSON‑LD.
+1. Instantiate the selected theme class.
+1. Call the theme’s `renderHTML`, `renderCSS`, and `renderJS` methods.
+1. Register HTMLRewriter hooks to inject:
+    - OpenGraph and Twitter metadata
+    - JSON‑LD
+    - analysis results
+    - theme CSS and JS
+    - the theme’s HTML fragment
+    - an optional enhancement Web Component
+1. Feed a deterministic HTML skeleton into the transformer.
+1. Return the fully rewritten HTML.
+
+Two transformer implementations exist:
+- WorkerTransformer (Cloudflare Worker, native HTMLRewriter)
+- NodeTransformer (CLI, html‑rewriter‑wasm)
+
+Both expose the same interface, so themes remain runtime‑agnostic.
+
+## Theme architecture
+Themes are implemented as classes that inherit from a shared base Theme class. The base class provides:
+- asset loading
+- shared helpers
+- a consistent lifecycle
+- a stable contract for the rendering pipeline
+
+Each concrete theme overrides:
+- `renderHTML(person)`
+- `renderCSS(person)`
+- `renderJS(person)`
+
+Themes are deterministic, side‑effect‑free, and do not manipulate the DOM. They may optionally include a Web Component that enhances the rendered page after load.
+
+## Why this architecture?
+### JSON‑LD as the source of truth
 Structured data is portable, durable, and machine‑readable.
-### 2. Client‑side rendering
+
+### Deterministic server‑side rendering
+Themes produce stable output across environments, with no client‑side rendering required.
+
+### Runtime‑neutral HTML rewriting
+The same pipeline runs in both the CLI and the publishing service.
+
+### Clean separation of concerns
+Data, rendering, and enhancement are isolated and composable.
+
+### Future‑proof theme system
 Themes can evolve independently without breaking published CVs.
-### 3. Deterministic normalization
-Ensures consistent rendering across themes and versions.
-### 4. GitHub‑based publishing
-Your CV becomes version‑controlled, reviewable, and diff‑friendly.
 
-## What This Enables
+## What this enables
+- consistent rendering across CLI and hosted service
+- deterministic, reproducible output
 - instant theme previews
-- zero server‑side rendering load
-- easy future integrations
-- deterministic, reproducible CVs
-- a clean separation between data and presentation
-
-## Why SemanticCV uses JSON‑LD and schema.org
-SemanticCV is built on JSON‑LD and the schema.org/Person vocabulary because they’re **global, industry‑backed standards**. Schema.org was created by Google, Microsoft, Yahoo, and Yandex to provide a shared, structured way of describing people, organizations, and content on the web.
-
-Using these standards means your CV:
-- is based on a format recognized across the entire web
-- remains compatible with search engines, AI tools, and future platforms
-- avoids lock‑in to niche or proprietary schemas
-- stays readable and durable for years to come
-
-In short: **your CV becomes structured data that the whole world understands.**
-
-
-[install]: https://github.com/apps/semantic-cv/installations/new
-[default]: https://semantic.cv/preview?theme=minimal
-[gallery]: https://semantic.cv/themes
+- optional client‑side enhancements
+- a stable foundation for future theme packs
