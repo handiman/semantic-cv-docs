@@ -132,8 +132,8 @@ Use `knowsLanguage`:
 
 ```json
 "knowsLanguage": [
-  "sv-SE",
-  "en-US"
+  "Swedish",
+  "English"
 ]
 ```
 
