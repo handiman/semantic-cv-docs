@@ -18,7 +18,7 @@ If you prefer a fully automated publishing flow, you can publish your CV directl
 - Install the [SemanticCV GitHub App][install]
 - Push your CV JSON‑LD to a repository the app has access to
 SemanticCV will normalize your JSON‑LD and store it. Your CV will then be available at:
-https://semantic.cv/\<your-github-username\>
+https://semantic.cv/<your-github-username\>
 
 
 Whenever you push updates, your published CV is automatically updated.
