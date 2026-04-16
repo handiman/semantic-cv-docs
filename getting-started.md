@@ -44,5 +44,13 @@ This is the same repository that powers your GitHub profile README, and since ev
 
 Use whatever makes sense for your workflow.
 
+## How updates are applied
+SemanticCV listens for changes to `cv.json` through the GitHub App.
+To avoid unnecessary API calls while you’re actively editing your CV, updates are applied with a short delay.
+
+**Changes to `cv.json` appear on semantic.cv within ~30 seconds.**
+
+This debounce window lets you save multiple edits or commits without triggering repeated syncs. If you don’t see your update immediately, give it a moment — the system will pick it up automatically.
+
 ## Why JSON‑LD and schema.org?
 SemanticCV uses JSON‑LD and the schema.org/Person vocabulary because they’re global, widely adopted standards created by Google, Microsoft, and other major search engines. They’re stable, well‑supported, and designed for long‑term interoperability — which makes your CV portable, future‑proof, and machine‑readable everywhere.
