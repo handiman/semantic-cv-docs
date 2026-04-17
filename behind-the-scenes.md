@@ -1,7 +1,5 @@
 # Behind the Scenes
 
-<img src="https://semantic.cv/img/semantikitten-excited.png" alt="Excited Semantikitten" height="100" align="right" style="margin-left: 20px;" />
-
 Hi, I’m Semantikitten. I keep semantic.cv running behind the scenes.  
 Here’s what happens when you push your `cv.json` to GitHub.
 
