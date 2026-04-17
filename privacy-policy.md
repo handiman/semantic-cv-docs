@@ -107,6 +107,8 @@ You may:
 - **Request deletion of non‑essential data**,  
   such as cached rendering metadata or UI preferences.
 
+For information on how to remove your data, see our [data deletion](./data-deletion.md) page.  
+
 ### What cannot be deleted
 semantic.cv must retain certain billing records (e.g., Stripe customer ID, transaction details) as required for accounting, tax, and licensing purposes.  
 These records cannot be removed on request but are stored securely and used only for compliance and access control.
