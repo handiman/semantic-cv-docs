@@ -49,6 +49,7 @@ If you purchase a subscription:
 Payment processing is handled by Stripe.  
 semantic.cv does not store payment card details.
 
+For more information about subscriptions and paid features, see our [billing & subscription](./billing-and-subscription.md) page.   
 For information about refunds, see our [refund policy][refund].
 
 ---
