@@ -49,6 +49,8 @@ If you purchase a subscription:
 Payment processing is handled by Stripe.  
 semantic.cv does not store payment card details.
 
+For information about refunds, see our [refund policy][refund].
+
 ---
 
 ## 5. Acceptable Use
@@ -78,7 +80,7 @@ If the service is discontinued:
 - stored CV data will be removed  
 - subscription access will end  
 
-Refunds, if any, will follow the applicable refund policy.
+Refunds, if any, will follow the applicable [refund policy][refund].
 
 ---
 
@@ -91,3 +93,5 @@ Continued use of the service after changes take effect constitutes acceptance of
 ## 9. Contact
 For questions about these terms, contact:  
 **info@semantic.cv**
+
+[refund]: ./refund-policy.md
