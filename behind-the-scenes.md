@@ -43,4 +43,4 @@ More themes.
 More polish.  
 Maybe a nap.
 
-<img src="https://semantic.cv/img/semantikitten-napping.png" alt="Sleepy Semantikitten" height="100" style="margin-left: 20px;margin-top:20px;" />
+<img src="https://semantic.cv/img/semantikitten-napping.png" align="right" alt="Sleepy Semantikitten" height="100" style="margin-left: 20px;margin-top:20px;" />
