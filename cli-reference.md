@@ -96,7 +96,6 @@ Outputs:
 - cv.json.txt — an ATS‑friendly plain‑text version
 
 Rendering uses the same free themes that the hosted site uses.
-Themes are JavaScript/Web Component bundles that run client‑side.
 
 `help`
 Show help for any command:

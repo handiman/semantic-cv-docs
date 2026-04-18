@@ -19,9 +19,6 @@ Semantic‑CV consists of three cooperating layers that share the same rendering
 - Each theme is a class inheriting from a shared base Theme class
 - Implements `renderHTML`, `renderCSS`, and `renderJS`
 - Produces deterministic output based solely on your JSON‑LD
-- May optionally include a Web Component for client‑side enhancement
-
-This architecture keeps rendering consistent across environments while remaining theme‑agnostic and future‑proof.
 
 ## Data flow
 ### 1. You create your JSON‑LD

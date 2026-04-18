@@ -17,6 +17,7 @@ The CLI writes the rendered output to disk. From there, you can host it yourself
 If you prefer a fully automated publishing flow, you can publish your CV directly to semantic.cv.
 - Install the [SemanticCV GitHub App][install]
 - Push your CV JSON‑LD to a repository the app has access to
+
 SemanticCV will normalize your JSON‑LD and store it. Your CV will then be available at:
 https://semantic.cv/<your-github-username\>
 
@@ -24,12 +25,11 @@ https://semantic.cv/<your-github-username\>
 Whenever you push updates, your published CV is automatically updated.
 
 ### How Rendering Works
-The site does **not** store pre‑rendered HTML. Instead:
+The site uses the JSON‑LD as the single source of truth:
 - Your normalized JSON‑LD is embedded in the page as
 `<script type="application/ld+json">…</script>`
-- Themes are implemented as JavaScript/Web Component bundles
-- Rendering happens client‑side, using the JSON‑LD as the single source of truth
-This keeps the platform fast, flexible, and theme‑agnostic
+- Themes are rendered server‑side to transform JSON‑LD into HTML
+- The final HTML is served directly with full styling applied
 
 ## Themes
 Themes control the visual presentation of your CV. SemanticCV includes several free themes, each with its own layout, typography, and personality.
