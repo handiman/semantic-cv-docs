@@ -18,6 +18,16 @@ If `cv.json` was removed or renamed, the stored copy is deleted.
 We do not store older versions of your CV.  
 We do not modify your repository.
 
+### Encryption keys
+To protect your stored CV, semantic.cv generates a unique encryption key for each user.
+This key is used **only** to encrypt and decrypt your CV file. It is stored securely and is never shared with third parties.
+
+If you delete your CV or uninstall the Semantic‑CV GitHub App, the encryption key is permanently removed.
+Once the key is deleted, any encrypted copies of your CV — including backups — become **irreversibly unreadable**.
+This ensures that your data cannot be recovered or accessed after deletion.
+
+semantic.cv does **not** store any other personal information besides your CV and its associated encryption key.
+
 ### Account & authentication data
 semantic.cv may offer optional authentication (e.g., GitHub sign‑in) to access certain features such as theme previews or paid features.  
 If you choose to authenticate, we may receive:
