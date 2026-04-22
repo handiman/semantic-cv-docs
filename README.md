@@ -36,12 +36,15 @@ Themes control the visual presentation of your CV. SemanticCV includes several f
 
 By default, your CV uses the [minimal theme][default].
 
-To choose a different theme, add an `@theme` field to your JSON‑LD:
+To choose a different theme, add an `theme` field to your JSON‑LD:
 ```json
 {
-  "@context": "https://schema.org",
+  "@context": [
+    "https://schema.org",
+    "https://semantic.cv/context/latest.jsonld"
+  ],
   "@type": "Person",
-  "@theme": "boiling-diesel",
+  "theme": "boiling-diesel",
   // … more fields
 }
 ```

@@ -52,11 +52,14 @@ This usually takes a few seconds.
 Your published CV will always reflect the **latest commit** on the default branch.
 
 ## 4. Choosing a Theme
-To select a theme for your published CV, add an @theme field to your JSON‑LD:
+To select a theme for your published CV, add an theme field to your JSON‑LD:
 {
-  "@context": "https://schema.org",
+  "@context": [
+    "https://schema.org",
+    "https://semantic.cv/context/latest.jsonld"
+  ],
   "@type": "Person",
-  "@theme": "minimal"
+  "theme": "minimal"
 }
 
 
@@ -83,7 +86,7 @@ Check that:
 
 ### My theme isn’t applied
 Ensure:
-- the `@theme` field is present
+- the `theme` field is present
 - the theme name matches the gallery exactly
 
 [install]: https://github.com/apps/semantic-cv/installations/new

@@ -183,10 +183,10 @@ Use `lifeEvent` for:
 
 ## Theme
 
-semantic-cv adds one custom field: `@theme`:
+semantic-cv adds one custom field: `theme`:
 
 ```json
-"@theme": "minimal"
+"theme": "minimal"
 ```
 
 This selects the rendering theme.  
