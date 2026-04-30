@@ -1,6 +1,6 @@
-# Conventions by CV Area
+# SemanticCV Field Conventions
 
-Recommended fields and how to use them.
+These conventions describe the recommended fields and structures when writing a CV for use with SemanticCV. They are based on Schema.org and JSON‑LD, and aim to keep CVs consistent, portable, and easy to render across themes.
 
 ## Identity
 
