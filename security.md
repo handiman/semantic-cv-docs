@@ -1,6 +1,6 @@
 # Security (semantic.cv)
 
-_Last updated: 2026‑04‑17_
+_Last updated: 2026‑10‑21_
 
 semantic.cv is designed to be a minimal, privacy‑focused service.  
 This page describes the security measures in place to protect your data.
@@ -35,7 +35,6 @@ Authentication is optional and not required to host a CV.
 semantic.cv stores only:
 
 - the latest version of your `cv.json` (if present in push events)  
-- subscription metadata required for billing (Stripe customer ID, subscription status)  
 
 We do **not** store:
 
@@ -49,21 +48,13 @@ All data is stored in secure, access‑controlled environments.
 
 ---
 
-## 4. Payments
-All payments are processed securely by **Stripe**.
-
-- semantic.cv does **not** store payment card details  
-- Stripe handles card data, PCI compliance, and secure payment flows  
-
----
-
-## 5. Transport Security
+## 4. Transport Security
 All communication with semantic.cv uses **HTTPS** with modern TLS.  
 Unencrypted HTTP requests are redirected to HTTPS.
 
 ---
 
-## 6. Logging
+## 5. Logging
 semantic.cv keeps minimal server logs for security and debugging.
 
 - Logs do **not** contain CV content  
@@ -72,7 +63,7 @@ semantic.cv keeps minimal server logs for security and debugging.
 
 ---
 
-## 7. Vulnerability Reporting
+## 6. Vulnerability Reporting
 If you discover a security issue, please contact:
 
 **security@semantic.cv**
@@ -81,14 +72,13 @@ We appreciate responsible disclosure.
 
 ---
 
-## 8. Summary
+## 7. Summary
 semantic.cv is built with a minimal attack surface:
 
 - read‑only GitHub App  
 - no server‑side authentication storage  
 - no analytics or tracking  
 - no unnecessary data retention  
-- Stripe‑handled payments  
 - HTTPS everywhere  
 
 This approach reduces risk and keeps your data safe by design.
