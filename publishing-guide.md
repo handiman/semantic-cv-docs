@@ -48,11 +48,13 @@ After you push:
 - The normalized JSON‑LD is stored
 - Your public CV page is updated
 
-This usually takes a few seconds.   
+Updates are applied after a short delay, so your CV appears on semantic.cv within about 30 seconds of your push.   
 Your published CV will always reflect the **latest commit** on the default branch.
 
 ## 4. Choosing a Theme
-To select a theme for your published CV, add an theme field to your JSON‑LD:
+To select a theme for your published CV, add a `theme` field to your JSON‑LD:
+
+```json
 {
   "@context": [
     "https://schema.org",
@@ -61,6 +63,7 @@ To select a theme for your published CV, add an theme field to your JSON‑LD:
   "@type": "Person",
   "theme": "minimal"
 }
+```
 
 
 If no theme is specified, the [default theme][default] is used.

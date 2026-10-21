@@ -24,9 +24,6 @@ Just your CV.
 I take your JSON and render it using the theme you selected.  
 Themes are like outfits — I keep them neatly folded and ready.
 
-You can write your own themes too.  
-I’ll wear them proudly.
-
 ## Hosting
 
 Your CV lives at `semantic.cv/<username>`.  

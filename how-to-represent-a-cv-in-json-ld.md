@@ -37,7 +37,7 @@ Every CV begins with a `Person`.
 Here is a real example based on the SemanticCV format:
 ```json
 {
-  "@context": ["https://schema.org"],
+  "@context": "https://schema.org",
   "@type": "Person",
 
   "name": "Henrik Becker",
@@ -143,7 +143,7 @@ This pattern supports:
 - `roleName`
 - `description`
 - `startDate / endDate`
-- `skills`
+- `keywords`
 - a reference to either an __Organization__ or a __Project__
 
 #### Example: Consulting engagement
@@ -224,7 +224,7 @@ Here is a shortened but accurate SemanticCV‑style CV.
 
 ```json
 {
-  "@context": ["https://schema.org"],
+  "@context": "https://schema.org",
   "@type": "Person",
 
   "name": "Henrik Becker",
@@ -281,7 +281,7 @@ Here is a shortened but accurate SemanticCV‑style CV.
     }
   ],
 
-  "theme": "boiling-diesel",
+  "theme": "boiling-diesel"
 }
 ```
 

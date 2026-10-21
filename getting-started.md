@@ -15,12 +15,13 @@ Initialize a new CV:
 ```sh
 semantic-cv init
 ```
-The `init command walks you through a short set of prompts to collect the core information every CV needs, such as:
+The `init` command walks you through a short set of prompts to collect the information every CV needs, such as:
 - **name** — your full name
 - **jobTitle** — your current role or professional identity
-- **description** — a short summary or headline`
+- **description** — a short summary or headline
+- contact details: email, phone, website and a profile image
 
-These aren’t strictly required by `schema.org/Person`, but they are the foundation of a meaningful CV. Once you’ve answered the prompts, the CLI generates a `cv.json` file containing a clean, minimal JSON‑LD structure based on your input.
+`name`, `jobTitle` and `description` are required for a valid CV; `semantic-cv analyze` reports an error if one is missing. Once you’ve answered the prompts, the CLI generates a `cv.json` file containing a clean, minimal JSON‑LD structure based on your input.
 
 You can expand this file manually or continue building it using `semantic-cv add` commands.
 

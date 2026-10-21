@@ -31,7 +31,7 @@ Here’s an example based on a real SemanticCV document:
 
 ```json
 {
-  "@context": ["https://schema.org"],
+  "@context": "https://schema.org",
   "@type": "Person",
 
   "name": "Henrik Becker",
@@ -179,7 +179,7 @@ Here is a shortened but representative example combining all sections:
 
 ```json
 {
-  "@context": ["https://schema.org"],
+  "@context": "https://schema.org",
   "@type": "Person",
 
   "name": "Henrik Becker",
