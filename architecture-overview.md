@@ -17,7 +17,7 @@ Semantic‑CV consists of three cooperating layers that share the same rendering
 
 ### 3. Theme Classes
 - Each theme is a class inheriting from a shared base Theme class
-- Implements `renderHTML`, `renderCSS`, and `renderJS`
+- Implements `renderHTML`; `renderCSS` and `renderJS` load the theme's own `.css` and `.js` files by default
 - Produces deterministic output based solely on your JSON‑LD
 
 ## Data flow
@@ -77,10 +77,7 @@ Themes are implemented as classes that inherit from a shared base Theme class. T
 - a consistent lifecycle
 - a stable contract for the rendering pipeline
 
-Each concrete theme overrides:
-- `renderHTML(person)`
-- `renderCSS(person)`
-- `renderJS(person)`
+Each concrete theme implements `renderHTML(person)`, and may override `renderCSS(person)` and `renderJS(person)`, which by default load `<id>.css` and `<id>.js`.
 
 Themes are deterministic, side‑effect‑free, and do not manipulate the DOM. They may optionally include a Web Component that enhances the rendered page after load.
 

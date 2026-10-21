@@ -12,6 +12,7 @@ These conventions describe the recommended fields and structures when writing a 
 | `image`        | Profile photo (URL)                              |
 | `url`          | Personal website or portfolio                    |
 | `workLocation` | Where you're based                               |
+| `nationality`  | Nationality                                      |
 
 ## Contact & Online Presence
 
@@ -57,9 +58,20 @@ Example:
     "description": "Led development of the X platform.",
     "worksFor": {
       "@type": "Organization",
-      "name": "Acm  e Inc."
+      "name": "Acme Inc."
     }
   }
+]
+```
+
+### Keywords
+
+Use `keywords` on a role to list the technologies and skills you used in it. Each keyword is a `DefinedTerm`; plain strings are converted to that form when the CV is normalized. `semantic-cv add keywords` adds them for you.
+
+```json
+"keywords": [
+  { "@type": "DefinedTerm", "name": "TypeScript" },
+  { "@type": "DefinedTerm", "name": "Node.js" }
 ]
 ```
 
@@ -90,7 +102,7 @@ Use `worksFor` with inner `"@type": "Project"` for open source projects, volunte
 "worksFor": [
   {
     "@type": "Role",
-    "name": "Lead Developer",
+    "roleName": "Lead Developer",
     "startDate": "2026-03-01",
     "worksFor": {
       "@type": "Project",
@@ -189,7 +201,9 @@ semantic-cv adds one custom field: `theme`:
 "theme": "minimal"
 ```
 
-This selects the rendering theme.  
+This selects the rendering theme on the hosted site.  
 It does **not** affect the data model.
+
+`semantic-cv set theme <name>` writes the equivalent object form, `{ "@type": "Theme", "name": "minimal" }`. Both forms are accepted.
 
 [country]: https://schema.org/Country

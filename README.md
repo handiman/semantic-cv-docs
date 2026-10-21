@@ -6,8 +6,9 @@ You can use SemanticCV in two ways: through the CLI or by publishing directly to
 ## CLI Workflow
 The SemanticCV CLI helps you create and maintain your CV as valid [`schema.org/Person`][schema]
 JSON‑LD. It provides commands to:
-- Add and edit sections of your CV
-- Analyze your data to ensure it follows the schema
+- Add sections to your CV and set its basic fields
+- Convert an existing JSON Resume file
+- Analyze your data for missing fields and structural errors, once or continuously while you edit
 - Normalize fields for consistency
 - Render your CV as HTML using any of the included free themes
 - Generate an ATS‑friendly plain‑text version
@@ -36,7 +37,7 @@ Themes control the visual presentation of your CV. SemanticCV includes several f
 
 By default, your CV uses the [minimal theme][default].
 
-To choose a different theme, add an `theme` field to your JSON‑LD:
+To choose a different theme, add a `theme` field to your JSON‑LD:
 ```json
 {
   "@context": [
@@ -66,7 +67,7 @@ In short: JSON‑LD makes your CV portable, durable, and unambiguous.
 ## Next Steps
 - Install the CLI
   ```sh
-  npm install semantic-cv
+  npm install -g semantic-cv
   ```
 - Install the [GitHub App][install]
 - Explore the [theme gallery][gallery]
