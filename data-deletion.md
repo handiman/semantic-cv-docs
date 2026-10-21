@@ -1,6 +1,6 @@
 # Data Deletion (semantic.cv)
 
-_Last updated: 2026‑04‑17_
+_Last updated: 2026‑10‑21_
 
 This page explains how to remove your data from semantic.cv and what data can and cannot be deleted.
 
@@ -31,38 +31,13 @@ No additional authentication data, preferences, or metadata are stored by semant
 
 ---
 
-## 3. Subscription Data
-If you have an active or past subscription, semantic.cv stores:
-
-- your Stripe customer ID  
-- your subscription status  
-- billing‑related metadata
-
-### What can be deleted
-You may request deletion of non‑essential subscription metadata, such as:
-
-- cached entitlement information  
-- UI preferences  
-- temporary session data
-
-### What cannot be deleted
-Certain billing records **cannot** be deleted on request, including:
-
-- Stripe customer ID  
-- transaction records  
-- subscription history
-
-These must be retained for accounting, tax, and licensing compliance.
-
----
-
-## 4. Logs
+## 3. Logs
 semantic.cv stores minimal server logs for security and debugging.  
 These logs do not include CV content and are automatically purged on a rolling basis.
 
 ---
 
-## 5. Requesting Data Deletion
+## 4. Requesting Data Deletion
 To request deletion of authentication data, non‑essential metadata, or other removable information, contact:
 
 **privacy@semantic.cv**
@@ -77,13 +52,12 @@ We may ask for additional information to verify the request.
 
 ---
 
-## 6. Summary
+## 5. Summary
 You can delete your data by:
 
 - removing or renaming `cv.json`  
 - uninstalling the GitHub App  
 - contacting us to remove authentication or UI data  
 
-Billing records cannot be deleted due to legal requirements.
 
 ---
