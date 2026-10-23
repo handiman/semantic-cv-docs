@@ -148,7 +148,7 @@ This pattern supports:
 
 #### Skills per role with `keywords`
 
-Use `keywords` on the `Role` to list the technologies and skills used in that job or project. Each keyword is a `DefinedTerm`; plain strings are converted to that form when the CV is normalized, and `semantic-cv add keywords` adds them for you.
+Use `keywords` on the `Role` in `worksFor` to list the technologies and skills used in that job or project. Each keyword is a `DefinedTerm`; plain strings are converted to that form when the CV is normalized, and `semantic-cv add keywords` adds them for you.
 
 ```json
 "keywords": [
@@ -157,7 +157,7 @@ Use `keywords` on the `Role` to list the technologies and skills used in that jo
 ]
 ```
 
-Keywords belong on the `Role`, not on the inner `Organization` or `Project`, since they describe what you did in that role. The top-level `skills` list is still the place for your overall skill set.
+Keywords belong on the `Role` in `worksFor`, not on the inner `Organization` or `Project`, since they describe what you did in that role. They are not used on education (`alumniOf`). The top-level `skills` list is still the place for your overall skill set.
 
 #### Example: Consulting engagement
 

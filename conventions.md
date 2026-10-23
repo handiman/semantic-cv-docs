@@ -86,7 +86,7 @@ Use [`keywords`](https://schema.org/keywords) on a role in `worksFor` to list th
 ]
 ```
 
-Put `keywords` on the `Role`, not on the inner `Organization` or `Project`: the skills describe what you did in that role, not the employer or the project as a whole.
+Put `keywords` on the `Role` in `worksFor`, not on the inner `Organization` or `Project`: the skills describe what you did in that role, not the employer or the project as a whole. They are not used on education (`alumniOf`).
 
 Use `keywords` for skills tied to a specific job or project, and the top-level `skills` (see below) for your overall skill set.
 
