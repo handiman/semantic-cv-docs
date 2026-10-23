@@ -66,14 +66,29 @@ Example:
 
 ### Keywords
 
-Use `keywords` on a role to list the technologies and skills you used in it. Each keyword is a `DefinedTerm`; plain strings are converted to that form when the CV is normalized. `semantic-cv add keywords` adds them for you.
+Use [`keywords`](https://schema.org/keywords) on a role in `worksFor` to list the technologies and skills you used in it. This works the same for work at an organization and for projects. Each keyword is a `DefinedTerm`; plain strings are converted to that form when the CV is normalized. `semantic-cv add keywords` adds them for you.
 
 ```json
-"keywords": [
-  { "@type": "DefinedTerm", "name": "TypeScript" },
-  { "@type": "DefinedTerm", "name": "Node.js" }
+"worksFor": [
+  {
+    "@type": "Role",
+    "roleName": "Senior Software Engineer",
+    "startDate": "2023-07-01",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Acme Ltd."
+    },
+    "keywords": [
+      { "@type": "DefinedTerm", "name": "TypeScript" },
+      { "@type": "DefinedTerm", "name": "Node.js" }
+    ]
+  }
 ]
 ```
+
+Put `keywords` on the `Role` in `worksFor`, not on the inner `Organization` or `Project`: the skills describe what you did in that role, not the employer or the project as a whole. They are not used on education (`alumniOf`).
+
+Use `keywords` for skills tied to a specific job or project, and the top-level `skills` (see below) for your overall skill set.
 
 ## Education
 
@@ -107,7 +122,11 @@ Use `worksFor` with inner `"@type": "Project"` for open source projects, volunte
     "worksFor": {
       "@type": "Project",
       "name": "Semantic CV"
-    }
+    },
+    "keywords": [
+      { "@type": "DefinedTerm", "name": "Node.js" },
+      { "@type": "DefinedTerm", "name": "Cloudflare Workers" }
+    ]
   }
 ]
 ```
