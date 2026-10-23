@@ -146,6 +146,19 @@ This pattern supports:
 - `keywords`
 - a reference to either an __Organization__ or a __Project__
 
+#### Skills per role with `keywords`
+
+Use `keywords` on the `Role` to list the technologies and skills used in that job or project. Each keyword is a `DefinedTerm`; plain strings are converted to that form when the CV is normalized, and `semantic-cv add keywords` adds them for you.
+
+```json
+"keywords": [
+  { "@type": "DefinedTerm", "name": "C#" },
+  { "@type": "DefinedTerm", "name": "Azure Service Bus" }
+]
+```
+
+Keywords belong on the `Role`, not on the inner `Organization` or `Project`, since they describe what you did in that role. The top-level `skills` list is still the place for your overall skill set.
+
 #### Example: Consulting engagement
 
 ```json
@@ -189,7 +202,11 @@ This pattern supports:
   "worksFor": {
     "@type": "Project",
     "name": "Semantic CV"
-  }
+  },
+  "keywords": [
+    { "@type": "DefinedTerm", "name": "Node.js" },
+    { "@type": "DefinedTerm", "name": "Cloudflare Workers" }
+  ]
 }
 ```
 
@@ -198,7 +215,7 @@ It allows you to attach:
 - role names
 - descriptions
 - start/end dates
-- skills
+- skills used in the role, as `keywords`
 - and a reference to either an Organization or a Project
 
 ### Projects vs Organizations
@@ -269,7 +286,11 @@ Here is a shortened but accurate SemanticCV‑style CV.
       "roleName": "Lead Developer",
       "description": "A schema.org‑first CV generator for developers built with Nodejs and Cloudflare workers.",
       "startDate": "2026-03-26",
-      "worksFor": { "@type": "Project", "name": "Semantic CV" }
+      "worksFor": { "@type": "Project", "name": "Semantic CV" },
+      "keywords": [
+        { "@type": "DefinedTerm", "name": "Node.js" },
+        { "@type": "DefinedTerm", "name": "Cloudflare Workers" }
+      ]
     },
     {
       "@type": "Role",
