@@ -1,6 +1,6 @@
 # Data Deletion (semantic.cv)
 
-_Last updated: 2026‑10‑21_
+_Last updated: 2026‑11‑06_
 
 This page explains how to remove your data from semantic.cv and what data can and cannot be deleted.
 
@@ -19,6 +19,13 @@ If you uninstall or suspend the Semantic‑CV GitHub App, all stored CV data ass
 
 semantic.cv does not store older versions of your CV.
 
+### Plan record
+If you are on a paid or granted plan, we keep a small record of your GitHub username, your plan and its start and end dates after your CV is deleted. This lets your plan apply again if you publish a new CV.
+
+- On the free plan, no such record is kept.
+- The record is removed when you delete your CV (or uninstall the GitHub App) after your plan has ended and a grace period of 7 days has passed. A weekly cleanup also removes records of plans that ended more than 7 days ago.
+- You can ask us to remove it at any time, see section 4.
+
 ---
 
 ## 2. Authentication Data
@@ -27,7 +34,7 @@ semantic.cv offers optional authentication (e.g., GitHub sign‑in) for accessin
 semantic.cv does not store any authentication‑related data on the server.  
 Authentication is handled entirely through a session cookie, which is removed automatically when you sign out or when the session expires.
 
-No additional authentication data, preferences, or metadata are stored by semantic.cv.
+Apart from the plan record described in section 1, no additional authentication data, preferences, or metadata are stored by semantic.cv.
 
 ---
 
@@ -38,7 +45,7 @@ These logs do not include CV content and are automatically purged on a rolling b
 ---
 
 ## 4. Requesting Data Deletion
-To request deletion of authentication data, non‑essential metadata, or other removable information, contact:
+To request deletion of your plan record, authentication data, non‑essential metadata, or other removable information, contact:
 
 **privacy@semantic.cv**
 
@@ -57,7 +64,7 @@ You can delete your data by:
 
 - removing or renaming `cv.json`  
 - uninstalling the GitHub App  
-- contacting us to remove authentication or UI data  
+- contacting us to remove your plan record, authentication or UI data  
 
 
 ---
