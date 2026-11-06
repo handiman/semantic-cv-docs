@@ -1,6 +1,6 @@
 # Privacy Policy (semantic.cv)
 
-_Last updated: 2026‑11‑06_
+_Last updated: 2026‑11‑07_
 
 semantic.cv is a service for rendering and hosting CVs based on the Semantic‑CV format. This policy explains what information is collected, how it is used, and how it is handled.
 
@@ -81,7 +81,7 @@ We do not share personal data with third parties for marketing.
 - A copy of your latest `cv.json` is stored on semantic.cv as long as the GitHub App remains installed.  
 - When you uninstall or suspend the GitHub App, your stored CV is removed automatically.  
 - Your repository and branch are removed together with your CV.  
-- If you are on a paid or granted plan, a record of your GitHub username, plan and its start and end dates is kept after your CV is deleted, so that your plan applies if you publish again. It is removed when you delete your CV after your plan has ended and a grace period of 7 days has passed, and in any case by a weekly cleanup of plans that ended more than 7 days ago. If you are on the free plan, no such record is kept.  
+- If you are on a paid or granted plan, a record of your GitHub username, plan and its start and end dates is kept after your CV is deleted, so that your plan applies if you publish again. It is kept as long as your CV is published, even if your plan has ended, so that renewing it picks up where you left off. Once you have no published CV, it is removed when your plan has ended and a grace period of 7 days has passed, either when you delete your CV or by a weekly cleanup. If you are on the free plan, no such record is kept.  
 - Authentication data is retained only as long as needed to provide the feature you are using.  
 - Session cookies are removed when you sign out.
 

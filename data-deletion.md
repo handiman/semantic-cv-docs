@@ -1,6 +1,6 @@
 # Data Deletion (semantic.cv)
 
-_Last updated: 2026‑11‑06_
+_Last updated: 2026‑11‑07_
 
 This page explains how to remove your data from semantic.cv and what data can and cannot be deleted.
 
@@ -23,7 +23,8 @@ semantic.cv does not store older versions of your CV.
 If you are on a paid or granted plan, we keep a small record of your GitHub username, your plan and its start and end dates after your CV is deleted. This lets your plan apply again if you publish a new CV.
 
 - On the free plan, no such record is kept.
-- The record is removed when you delete your CV (or uninstall the GitHub App) after your plan has ended and a grace period of 7 days has passed. A weekly cleanup also removes records of plans that ended more than 7 days ago.
+- While your CV is published, the record is kept even if your plan has ended, so that renewing it picks up where you left off.
+- Once you have no published CV (you deleted it or uninstalled the GitHub App), the record is removed when your plan has ended and a grace period of 7 days has passed. A weekly cleanup removes it if that happened without you deleting anything.
 - You can ask us to remove it at any time, see section 4.
 
 ---
