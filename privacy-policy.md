@@ -1,6 +1,6 @@
 # Privacy Policy (semantic.cv)
 
-_Last updated: 2026‑10‑21_
+_Last updated: 2026‑11‑06_
 
 semantic.cv is a service for rendering and hosting CVs based on the Semantic‑CV format. This policy explains what information is collected, how it is used, and how it is handled.
 
@@ -17,6 +17,11 @@ If `cv.json` was removed or renamed, the stored copy is deleted.
 
 We do not store older versions of your CV.  
 We do not modify your repository.
+
+### Service record
+To serve your CV at `semantic.cv/<username>`, we keep a record of your GitHub username, the repository and branch your `cv.json` is published from, and the plan (tier) you are on.
+
+For paid or granted plans, we also keep the date the plan started and the date it ends. This record is kept separately from your CV so that your plan is not lost if you delete your CV and publish it again later.
 
 ### Account & authentication data
 semantic.cv may offer optional authentication (e.g., GitHub sign‑in) to access certain features such as theme previews.  
@@ -75,6 +80,8 @@ We do not share personal data with third parties for marketing.
 
 - A copy of your latest `cv.json` is stored on semantic.cv as long as the GitHub App remains installed.  
 - When you uninstall or suspend the GitHub App, your stored CV is removed automatically.  
+- Your repository and branch are removed together with your CV.  
+- If you are on a paid or granted plan, a record of your GitHub username, plan and its start and end dates is kept after your CV is deleted, so that your plan applies if you publish again. It is removed when you delete your CV after your plan has ended and a grace period of 7 days has passed, and in any case by a weekly cleanup of plans that ended more than 7 days ago. If you are on the free plan, no such record is kept.  
 - Authentication data is retained only as long as needed to provide the feature you are using.  
 - Session cookies are removed when you sign out.
 
@@ -90,8 +97,8 @@ You may:
 - **Modify or remove your `cv.json` file in your GitHub repository at any time.**  
   semantic.cv will update or remove the stored copy accordingly.
 
-- **Request deletion of non‑essential data**,  
-  such as cached rendering metadata or UI preferences.
+- **Request deletion of your plan record**, or other non‑essential data  
+  such as cached rendering metadata or UI preferences, by contacting us. We will remove it, unless we must keep it for legal reasons such as bookkeeping.
 
 For information on how to remove your data, see our [data deletion](./data-deletion.md) page.  
 
