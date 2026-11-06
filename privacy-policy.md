@@ -1,6 +1,6 @@
 # Privacy Policy (semantic.cv)
 
-_Last updated: 2026‑11‑07_
+_Last updated: 2026‑11‑06_
 
 semantic.cv is a service for rendering and hosting CVs based on the Semantic‑CV format. This policy explains what information is collected, how it is used, and how it is handled.
 

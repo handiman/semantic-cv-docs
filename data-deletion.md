@@ -1,6 +1,6 @@
 # Data Deletion (semantic.cv)
 
-_Last updated: 2026‑11‑07_
+_Last updated: 2026‑11‑06_
 
 This page explains how to remove your data from semantic.cv and what data can and cannot be deleted.
 
